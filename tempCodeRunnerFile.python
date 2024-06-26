@@ -1,0 +1,50 @@
+# def separate_digits_for(number):
+#   return [int(digit) for digit in str(number)]
+
+# n=input()
+# arr=list()
+# arr1=list()
+# digits=separate_digits_for(n)
+# # print(digits)
+# for digit in digits:
+#     if digit % 2 ==0:
+#         arr.append(digit)
+#     else:
+#         arr1.append(digit)
+
+# sum_e=sum(arr)
+# sum_o=sum(arr1)
+# print(sum_e,sum_o,sep="  ")
+
+def separate_digits_for(number):
+    return [int(digit) for digit in str(number)]
+
+n = input()
+arr, arr1 = zip(*[int(digit) for digit in str(n)] if int(n) >= 0 else ([], []))
+sum_e = sum(arr)
+sum_o = sum(arr1)
+
+print(f"{sum(arr):>3} {sum(arr1):>3}")
+
+
+
+
+# def separate_digits_for(number):
+#   """
+#   Separates the digits in a number using a for loop.
+
+#   Args:
+#       number: The integer to separate digits from.
+
+#   Returns:
+#       A list of integers representing the individual digits.
+#   """
+#   digits = []
+#   for digit in str(number):
+#     digits.append(int(digit))
+#   return digits
+
+# # Example usage
+# number = 12345
+# separate_digits_list = separate_digits_for(number)
+# print(separate_digits_list)  # Output: [1, 2, 3, 4, 5]
